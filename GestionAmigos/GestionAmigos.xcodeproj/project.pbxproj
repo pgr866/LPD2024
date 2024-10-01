@@ -6,6 +6,11 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		35E240422CAC6A4C002E814B /* ModeloDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E240412CAC6A4C002E814B /* ModeloDatos.swift */; };
+		35E240442CAC6A67002E814B /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35E240432CAC6A67002E814B /* Amigo.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		35814EB62CAC43CE00615BBB /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +32,8 @@
 		35814EA52CAC43CC00615BBB /* GestionAmigos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GestionAmigos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		35814EB52CAC43CE00615BBB /* GestionAmigosTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestionAmigosTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		35814EBF2CAC43CE00615BBB /* GestionAmigosUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GestionAmigosUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		35E240412CAC6A4C002E814B /* ModeloDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModeloDatos.swift; sourceTree = "<group>"; };
+		35E240432CAC6A67002E814B /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -75,6 +82,7 @@
 		35814E9C2CAC43CB00615BBB = {
 			isa = PBXGroup;
 			children = (
+				35E240402CAC6A27002E814B /* Datos */,
 				35814EA72CAC43CC00615BBB /* GestionAmigos */,
 				35814EB82CAC43CE00615BBB /* GestionAmigosTests */,
 				35814EC22CAC43CE00615BBB /* GestionAmigosUITests */,
@@ -90,6 +98,15 @@
 				35814EBF2CAC43CE00615BBB /* GestionAmigosUITests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		35E240402CAC6A27002E814B /* Datos */ = {
+			isa = PBXGroup;
+			children = (
+				35E240432CAC6A67002E814B /* Amigo.swift */,
+				35E240412CAC6A4C002E814B /* ModeloDatos.swift */,
+			);
+			path = Datos;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,6 +253,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				35E240442CAC6A67002E814B /* Amigo.swift in Sources */,
+				35E240422CAC6A4C002E814B /* ModeloDatos.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

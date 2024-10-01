@@ -4,7 +4,7 @@ import SwiftUI
 struct GestionAmigosApp: App {
     var body: some Scene {
         WindowGroup {
-            VistaDetalle()
+            ListaAmigos()
         }
     }
 }
