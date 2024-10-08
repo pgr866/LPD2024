@@ -1,6 +1,7 @@
 import SwiftUI
 
 struct VistaDetalle: View {
+    @EnvironmentObject private var modeloDatos: ModeloDatos
     var amigoCurrent: Amigo
     var body: some View {
         ScrollView {

@@ -1,7 +1,7 @@
 import Foundation
 
-final class ModeloDatos{
-    var arrAmigos: [Amigo] = [
+final class ModeloDatos: ObservableObject {
+    @Published var arrAmigos: [Amigo] = [
         Amigo(nombre: "Donald Trump", telefono: "1234567890", email: "donaldtrump@gmailing.com",
               about: "Donald is an ordinary businessman", imagenID: "donald",
               latitud: 38.897003, longitud: -77.036549, favorito: true),

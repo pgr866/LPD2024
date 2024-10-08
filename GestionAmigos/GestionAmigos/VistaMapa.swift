@@ -13,5 +13,6 @@ struct VistaMapa: View {
                     center: CLLocationCoordinate2D(latitude: latitud, longitude: longitud),
                     span: MKCoordinateSpan(latitudeDelta: 0.01, longitudeDelta: 0.01))
             }
+            .mapStyle(.hybrid)
     }
 }
