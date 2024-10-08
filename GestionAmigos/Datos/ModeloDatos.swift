@@ -9,7 +9,7 @@ final class ModeloDatos{
               about: "He is crazy about AI", imagenID: "mark",
               latitud: 37.433722, longitud: -122.133986, favorito: false),
         Amigo(nombre: "Elon Musk", telefono: "9012345678", email: "elonmusk@gmailing.com",
-              about: "He is crazy about rockets", imagenID: "elon", latitud: 25.991835,
-              longitud: -97.183177, favorito: true)
+              about: "He is crazy about rockets", imagenID: "elon", latitud: 33.765065,
+              longitud: -118.180057, favorito: true)
     ]
 }

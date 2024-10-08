@@ -1,30 +1,25 @@
 import SwiftUI
 
 struct VistaDatos: View {
+    var amigoCurrent: Amigo
     var body: some View {
         VStack {
-            Text("Donald Trump")
+            Text(amigoCurrent.nombre)
                 .font(.title)
                 .foregroundColor(.white)
-            Label("655-555-555", systemImage:"iphone")
+            Label(amigoCurrent.telefono, systemImage:"iphone")
                 .font(.body)
-            Link(destination: URL(string: "mailto:comments@whitehouse.gov")!, label: {
+            Link(destination: URL(string: "mailto:" + amigoCurrent.email)!, label: {
                 Image(systemName: "envelope")
                     .frame(width: 20, height: 20, alignment: .center)
-                Text("comments@whitehouse.gov")
+                Text(amigoCurrent.email)
             })
             Divider()
-            Text("About Donald Trump")
+            Text("About " + amigoCurrent.nombre)
                 .font(.title2)
-            Text("Es un amigo muy gracioso.")
+            Text(amigoCurrent.about)
                 .font(.footnote)
             Spacer()
         }.background(Color.brown)
-    }
-}
-
-struct VistaDatos_Previews: PreviewProvider {
-    static var previews: some View {
-        VistaDatos()
     }
 }

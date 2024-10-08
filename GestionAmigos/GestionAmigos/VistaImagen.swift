@@ -1,13 +1,14 @@
 import SwiftUI
 
 struct VistaImagen: View {
+    var imagenID: String
     // Variables de estado para modificar la imagen
     @State private var shadowColor: Color = Color.red             // Color de la sombra original
     @State private var strokeWidth: CGFloat = 2.0                 // Grosor del borde original
     @State private var borderColor: Color = Color.white           // Color del borde original
 
     var body: some View {
-        Image("donald")
+        Image(imagenID)
             .resizable()
             .frame(width: 150, height: 150, alignment: .center)
             .clipShape(Circle())
@@ -33,11 +34,5 @@ struct VistaImagen: View {
                     blue: .random(in: 0...1)
                 )
             }
-    }
-}
-
-struct VistaImagen_Previews: PreviewProvider {
-    static var previews: some View {
-        VistaImagen()
     }
 }

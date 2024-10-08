@@ -3,15 +3,19 @@ import SwiftUI
 struct ListaAmigos: View {
     @State var soloFavoritos = false
     var body: some View {
-        List(){
-            Toggle(isOn: $soloFavoritos){
-                Text("Mostrar solo los favoritos")
-            }
-            ForEach(ModeloDatos().arrAmigos){
-                if !soloFavoritos || $0.favorito {
-                    VistaFila(amigoCurrent: $0)
+        NavigationView{
+            List(){
+                Toggle(isOn: $soloFavoritos){
+                    Text("Mostrar solo los favoritos")
                 }
-            }
+                ForEach(ModeloDatos().arrAmigos){amigo in
+                    if !soloFavoritos || amigo.favorito {
+                        NavigationLink(destination: VistaDetalle(amigoCurrent: amigo)){
+                            VistaFila(amigoCurrent: amigo)
+                        }
+                    }
+                }
+            }.navigationTitle("Amigos")
         }
     }
 }
