@@ -2,28 +2,26 @@ import SwiftUI
 
 struct BusquedaView: View {
     @Binding var text: String
-    
     var body: some View {
         HStack {
             Image(systemName: "magnifyingglass")
-                .foregroundColor(.gray)
-                .opacity(text.isEmpty ? 0.4 : 0.9) // Cambiar opacidad según el texto
-            TextField("Buscar…", text: $text)
-                //.padding(7)
-                //.background(Color(.systemGray6))
-                .cornerRadius(8)
-            
+                .foregroundColor(text.isEmpty ? Color(UIColor.gray).opacity(0.4) : Color(UIColor.gray).opacity(0.9))
+            TextField("Buscar...", text: $text)
+                .foregroundColor(.primary)
             if !text.isEmpty {
                 Button(action: {
-                    text = "" // Limpiar el campo de búsqueda
+                    text = ""
                 }) {
-                    Image(systemName: "x.circle.fill")
-                        .foregroundColor(.gray)
+                    Image(systemName: "x.circle")
+                        .foregroundColor(Color(UIColor.gray).opacity(0.9))
                 }
             }
         }
+        .padding(8)
+        .background(Color(.systemGray6))
+        .cornerRadius(8)
         .padding(.horizontal)
-        .background(RoundedRectangle(cornerRadius: 10).fill(Color.gray).shadow(radius: 2))
+        .animation(.default, value: text)
     }
 }
 
@@ -35,14 +33,18 @@ struct VistaListaAmigos: View {
         NavigationView{
             VStack {
                 BusquedaView(text: $query)
+                let result = amigoVM.arrAmigos.filter { amigo in
+                    (!soloFavoritos || amigo.favorito) &&
+                    (query.isEmpty || amigo.nombre.lowercased().contains(query.lowercased()))
+                }
                 List(){
                     Toggle(isOn: $soloFavoritos){
                         Text("Mostrar solo los favoritos")
                     }
-                    ForEach(amigoVM.arrAmigos.filter { amigo in
-                        (!soloFavoritos || amigo.favorito) &&
-                        (query.isEmpty || amigo.nombre.lowercased().contains(query.lowercased()))
-                    }) { amigo in
+                    if result.isEmpty {
+                        Text("No hay resultados")
+                    }
+                    ForEach(result) { amigo in
                         NavigationLink(destination: VistaDetalle(amigoCurrent: amigo)){
                             HStack{
                                 Image(amigo.imagenID)
