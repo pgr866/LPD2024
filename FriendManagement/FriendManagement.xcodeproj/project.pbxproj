@@ -1,0 +1,671 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3580872E2CBEB24B004BE331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3580872D2CBEB24B004BE331 /* Assets.xcassets */; };
+		358087552CBEB2E7004BE331 /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087542CBEB2E7004BE331 /* Amigo.swift */; };
+		358087572CBEB2F2004BE331 /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087562CBEB2F2004BE331 /* Mensaje.swift */; };
+		3580875A2CBEB35A004BE331 /* AmigoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087592CBEB35A004BE331 /* AmigoViewModel.swift */; };
+		3580875E2CBEB406004BE331 /* FriendManagementApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580875C2CBEB406004BE331 /* FriendManagementApp.swift */; };
+		3580876B2CBEB474004BE331 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 358087692CBEB474004BE331 /* Preview Assets.xcassets */; };
+		3580876F2CBEB5B9004BE331 /* VistaMain.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580876E2CBEB5B9004BE331 /* VistaMain.swift */; };
+		358087752CBEB633004BE331 /* VistaIdentificacion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087742CBEB633004BE331 /* VistaIdentificacion.swift */; };
+		358087772CBEB655004BE331 /* VistaChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087762CBEB655004BE331 /* VistaChat.swift */; };
+		358087792CBEB671004BE331 /* VistaListaAmigos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087782CBEB671004BE331 /* VistaListaAmigos.swift */; };
+		3580877B2CBEB68F004BE331 /* VistaDetalle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580877A2CBEB68F004BE331 /* VistaDetalle.swift */; };
+		3580877D2CBEB6A9004BE331 /* VistaImagen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3580877C2CBEB6A9004BE331 /* VistaImagen.swift */; };
+		358087812CBEB6E1004BE331 /* VistaMapa.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087802CBEB6E1004BE331 /* VistaMapa.swift */; };
+		358087832CBEB6EF004BE331 /* VistaDatos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087822CBEB6EF004BE331 /* VistaDatos.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		358087372CBEB24B004BE331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3580871E2CBEB24A004BE331 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 358087252CBEB24A004BE331;
+			remoteInfo = FriendManagement;
+		};
+		358087412CBEB24C004BE331 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 3580871E2CBEB24A004BE331 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 358087252CBEB24A004BE331;
+			remoteInfo = FriendManagement;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		358087262CBEB24A004BE331 /* FriendManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3580872D2CBEB24B004BE331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		358087362CBEB24B004BE331 /* FriendManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		358087402CBEB24C004BE331 /* FriendManagementUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendManagementUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		358087542CBEB2E7004BE331 /* Amigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Amigo.swift; sourceTree = "<group>"; };
+		358087562CBEB2F2004BE331 /* Mensaje.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mensaje.swift; sourceTree = "<group>"; };
+		358087592CBEB35A004BE331 /* AmigoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmigoViewModel.swift; sourceTree = "<group>"; };
+		3580875C2CBEB406004BE331 /* FriendManagementApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendManagementApp.swift; sourceTree = "<group>"; };
+		358087692CBEB474004BE331 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3580876E2CBEB5B9004BE331 /* VistaMain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMain.swift; sourceTree = "<group>"; };
+		358087742CBEB633004BE331 /* VistaIdentificacion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaIdentificacion.swift; sourceTree = "<group>"; };
+		358087762CBEB655004BE331 /* VistaChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaChat.swift; sourceTree = "<group>"; };
+		358087782CBEB671004BE331 /* VistaListaAmigos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaListaAmigos.swift; sourceTree = "<group>"; };
+		3580877A2CBEB68F004BE331 /* VistaDetalle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaDetalle.swift; sourceTree = "<group>"; };
+		3580877C2CBEB6A9004BE331 /* VistaImagen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaImagen.swift; sourceTree = "<group>"; };
+		358087802CBEB6E1004BE331 /* VistaMapa.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaMapa.swift; sourceTree = "<group>"; };
+		358087822CBEB6EF004BE331 /* VistaDatos.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaDatos.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		358087392CBEB24B004BE331 /* FriendManagementTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FriendManagementTests;
+			sourceTree = "<group>";
+		};
+		358087432CBEB24C004BE331 /* FriendManagementUITests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = FriendManagementUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		358087232CBEB24A004BE331 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358087332CBEB24B004BE331 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3580873D2CBEB24C004BE331 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3580871D2CBEB24A004BE331 = {
+			isa = PBXGroup;
+			children = (
+				358087532CBEB25C004BE331 /* Model */,
+				358087582CBEB2FB004BE331 /* ViewModels */,
+				3580876D2CBEB4DA004BE331 /* FriendManagement */,
+				358087392CBEB24B004BE331 /* FriendManagementTests */,
+				358087432CBEB24C004BE331 /* FriendManagementUITests */,
+				358087272CBEB24A004BE331 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		358087272CBEB24A004BE331 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				358087262CBEB24A004BE331 /* FriendManagement.app */,
+				358087362CBEB24B004BE331 /* FriendManagementTests.xctest */,
+				358087402CBEB24C004BE331 /* FriendManagementUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		358087532CBEB25C004BE331 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				358087542CBEB2E7004BE331 /* Amigo.swift */,
+				358087562CBEB2F2004BE331 /* Mensaje.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		358087582CBEB2FB004BE331 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				358087592CBEB35A004BE331 /* AmigoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		3580876C2CBEB4B5004BE331 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				358087692CBEB474004BE331 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3580876D2CBEB4DA004BE331 /* FriendManagement */ = {
+			isa = PBXGroup;
+			children = (
+				3580875C2CBEB406004BE331 /* FriendManagementApp.swift */,
+				3580876E2CBEB5B9004BE331 /* VistaMain.swift */,
+				358087702CBEB5D7004BE331 /* VistaIdentificacion */,
+				358087712CBEB5E5004BE331 /* VistaChat */,
+				358087722CBEB5F0004BE331 /* VistaListaAmigos */,
+				358087732CBEB5FC004BE331 /* VistaDetalle */,
+				3580872D2CBEB24B004BE331 /* Assets.xcassets */,
+				3580876C2CBEB4B5004BE331 /* Preview Content */,
+			);
+			path = FriendManagement;
+			sourceTree = "<group>";
+		};
+		358087702CBEB5D7004BE331 /* VistaIdentificacion */ = {
+			isa = PBXGroup;
+			children = (
+				358087742CBEB633004BE331 /* VistaIdentificacion.swift */,
+			);
+			path = VistaIdentificacion;
+			sourceTree = "<group>";
+		};
+		358087712CBEB5E5004BE331 /* VistaChat */ = {
+			isa = PBXGroup;
+			children = (
+				358087762CBEB655004BE331 /* VistaChat.swift */,
+			);
+			path = VistaChat;
+			sourceTree = "<group>";
+		};
+		358087722CBEB5F0004BE331 /* VistaListaAmigos */ = {
+			isa = PBXGroup;
+			children = (
+				358087782CBEB671004BE331 /* VistaListaAmigos.swift */,
+			);
+			path = VistaListaAmigos;
+			sourceTree = "<group>";
+		};
+		358087732CBEB5FC004BE331 /* VistaDetalle */ = {
+			isa = PBXGroup;
+			children = (
+				3580877A2CBEB68F004BE331 /* VistaDetalle.swift */,
+				3580877C2CBEB6A9004BE331 /* VistaImagen.swift */,
+				358087802CBEB6E1004BE331 /* VistaMapa.swift */,
+				358087822CBEB6EF004BE331 /* VistaDatos.swift */,
+			);
+			path = VistaDetalle;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		358087252CBEB24A004BE331 /* FriendManagement */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3580874A2CBEB24C004BE331 /* Build configuration list for PBXNativeTarget "FriendManagement" */;
+			buildPhases = (
+				358087222CBEB24A004BE331 /* Sources */,
+				358087232CBEB24A004BE331 /* Frameworks */,
+				358087242CBEB24A004BE331 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FriendManagement;
+			packageProductDependencies = (
+			);
+			productName = FriendManagement;
+			productReference = 358087262CBEB24A004BE331 /* FriendManagement.app */;
+			productType = "com.apple.product-type.application";
+		};
+		358087352CBEB24B004BE331 /* FriendManagementTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3580874D2CBEB24C004BE331 /* Build configuration list for PBXNativeTarget "FriendManagementTests" */;
+			buildPhases = (
+				358087322CBEB24B004BE331 /* Sources */,
+				358087332CBEB24B004BE331 /* Frameworks */,
+				358087342CBEB24B004BE331 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				358087382CBEB24B004BE331 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				358087392CBEB24B004BE331 /* FriendManagementTests */,
+			);
+			name = FriendManagementTests;
+			packageProductDependencies = (
+			);
+			productName = FriendManagementTests;
+			productReference = 358087362CBEB24B004BE331 /* FriendManagementTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		3580873F2CBEB24C004BE331 /* FriendManagementUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 358087502CBEB24C004BE331 /* Build configuration list for PBXNativeTarget "FriendManagementUITests" */;
+			buildPhases = (
+				3580873C2CBEB24C004BE331 /* Sources */,
+				3580873D2CBEB24C004BE331 /* Frameworks */,
+				3580873E2CBEB24C004BE331 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				358087422CBEB24C004BE331 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				358087432CBEB24C004BE331 /* FriendManagementUITests */,
+			);
+			name = FriendManagementUITests;
+			packageProductDependencies = (
+			);
+			productName = FriendManagementUITests;
+			productReference = 358087402CBEB24C004BE331 /* FriendManagementUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3580871E2CBEB24A004BE331 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					358087252CBEB24A004BE331 = {
+						CreatedOnToolsVersion = 16.0;
+					};
+					358087352CBEB24B004BE331 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 358087252CBEB24A004BE331;
+					};
+					3580873F2CBEB24C004BE331 = {
+						CreatedOnToolsVersion = 16.0;
+						TestTargetID = 358087252CBEB24A004BE331;
+					};
+				};
+			};
+			buildConfigurationList = 358087212CBEB24A004BE331 /* Build configuration list for PBXProject "FriendManagement" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 3580871D2CBEB24A004BE331;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 358087272CBEB24A004BE331 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				358087252CBEB24A004BE331 /* FriendManagement */,
+				358087352CBEB24B004BE331 /* FriendManagementTests */,
+				3580873F2CBEB24C004BE331 /* FriendManagementUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		358087242CBEB24A004BE331 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3580876B2CBEB474004BE331 /* Preview Assets.xcassets in Resources */,
+				3580872E2CBEB24B004BE331 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358087342CBEB24B004BE331 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3580873E2CBEB24C004BE331 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		358087222CBEB24A004BE331 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3580875E2CBEB406004BE331 /* FriendManagementApp.swift in Sources */,
+				3580876F2CBEB5B9004BE331 /* VistaMain.swift in Sources */,
+				3580875A2CBEB35A004BE331 /* AmigoViewModel.swift in Sources */,
+				358087552CBEB2E7004BE331 /* Amigo.swift in Sources */,
+				358087752CBEB633004BE331 /* VistaIdentificacion.swift in Sources */,
+				358087832CBEB6EF004BE331 /* VistaDatos.swift in Sources */,
+				358087792CBEB671004BE331 /* VistaListaAmigos.swift in Sources */,
+				3580877D2CBEB6A9004BE331 /* VistaImagen.swift in Sources */,
+				358087572CBEB2F2004BE331 /* Mensaje.swift in Sources */,
+				3580877B2CBEB68F004BE331 /* VistaDetalle.swift in Sources */,
+				358087772CBEB655004BE331 /* VistaChat.swift in Sources */,
+				358087812CBEB6E1004BE331 /* VistaMapa.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		358087322CBEB24B004BE331 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3580873C2CBEB24C004BE331 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		358087382CBEB24B004BE331 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 358087252CBEB24A004BE331 /* FriendManagement */;
+			targetProxy = 358087372CBEB24B004BE331 /* PBXContainerItemProxy */;
+		};
+		358087422CBEB24C004BE331 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 358087252CBEB24A004BE331 /* FriendManagement */;
+			targetProxy = 358087412CBEB24C004BE331 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		358087482CBEB24C004BE331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		358087492CBEB24C004BE331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3580874B2CBEB24C004BE331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FriendManagement/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ual.FriendManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		3580874C2CBEB24C004BE331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"FriendManagement/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ual.FriendManagement;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		3580874E2CBEB24C004BE331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ual.FriendManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendManagement.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FriendManagement";
+			};
+			name = Debug;
+		};
+		3580874F2CBEB24C004BE331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 18.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ual.FriendManagementTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/FriendManagement.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/FriendManagement";
+			};
+			name = Release;
+		};
+		358087512CBEB24C004BE331 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ual.FriendManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FriendManagement;
+			};
+			name = Debug;
+		};
+		358087522CBEB24C004BE331 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = ual.FriendManagementUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = FriendManagement;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		358087212CBEB24A004BE331 /* Build configuration list for PBXProject "FriendManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				358087482CBEB24C004BE331 /* Debug */,
+				358087492CBEB24C004BE331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3580874A2CBEB24C004BE331 /* Build configuration list for PBXNativeTarget "FriendManagement" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3580874B2CBEB24C004BE331 /* Debug */,
+				3580874C2CBEB24C004BE331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3580874D2CBEB24C004BE331 /* Build configuration list for PBXNativeTarget "FriendManagementTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3580874E2CBEB24C004BE331 /* Debug */,
+				3580874F2CBEB24C004BE331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		358087502CBEB24C004BE331 /* Build configuration list for PBXNativeTarget "FriendManagementUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				358087512CBEB24C004BE331 /* Debug */,
+				358087522CBEB24C004BE331 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3580871E2CBEB24A004BE331 /* Project object */;
+}
