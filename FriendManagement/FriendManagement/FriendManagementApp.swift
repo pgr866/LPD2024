@@ -1,11 +1,11 @@
 import SwiftUI
 
 @main
-struct FriendManagementApp: App {
+struct FriendsManagementApp: App {
     @StateObject private var amigoVM = AmigoViewModel()
     var body: some Scene {
         WindowGroup {
-            VistaListaAmigos()
+            VistaMain()
                 .environmentObject(amigoVM)
         }
     }

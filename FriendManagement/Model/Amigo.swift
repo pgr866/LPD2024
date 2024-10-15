@@ -11,4 +11,5 @@ struct Amigo: Identifiable {
     var latitud: Double = 0.0
     var longitud: Double = 0.0
     var favorito: Bool = false
+    var mensajes: [Mensaje] = []
 }
