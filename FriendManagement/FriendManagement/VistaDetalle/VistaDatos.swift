@@ -2,34 +2,33 @@ import SwiftUI
 
 struct VistaDatos: View {
     @EnvironmentObject private var amigoVM: AmigoViewModel
+    @State private var textoOpinion: String = ""
+    @State private var favorito = false
+    @State private var amigoIndex: Int = -1
     var amigoCurrent: Amigo
-    var index: Int{
-        amigoVM.arrAmigos.firstIndex(where: {$0.id == amigoCurrent.id})!
-    }
-    @State var textoOpinion: String = ""
     var body: some View {
         VStack {
             HStack{
-                Text(amigoVM.arrAmigos[index].nombre)
+                Text(amigoCurrent.nombre)
                     .font(.title)
                     .foregroundColor(.white)
                 Button{
-                    amigoVM.arrAmigos[index].favorito.toggle()
+                    favorito.toggle()
                 }label:{
-                    Image(systemName: amigoVM.arrAmigos[index].favorito ? "star.fill" : "star")
-                        .foregroundColor(amigoVM.arrAmigos[index].favorito ? .yellow : .gray)
+                    Image(systemName: favorito ? "star.fill" : "star")
+                        .foregroundColor(favorito ? .yellow : .gray)
                 }
             }
-            Label(amigoVM.arrAmigos[index].telefono, systemImage:"iphone")
+            Label(amigoCurrent.telefono, systemImage:"iphone")
                 .font(.body)
-            Link(destination: URL(string: "mailto:" + amigoVM.arrAmigos[index].email)!, label: {
+            Link(destination: URL(string: "mailto:" + amigoCurrent.email)!, label: {
                 Image(systemName: "livephoto")
                     .frame(width: 20, height: 20, alignment: .center)
-                Text(amigoVM.arrAmigos[index].email)
+                Text(amigoCurrent.email)
             })
             Divider()
             HStack {
-                Text("About " + amigoVM.arrAmigos[index].nombre)
+                Text("About " + amigoCurrent.nombre)
                     .font(.headline)
                 Image(systemName: "pencil")
                     .foregroundColor(.white)
@@ -38,14 +37,10 @@ struct VistaDatos: View {
             TextEditor(text: $textoOpinion)
                 .frame(width: 350, height: 200)
                 .overlay(Rectangle().stroke(Color.black, lineWidth: 1))
-                .onAppear(){
-                    textoOpinion = amigoVM.arrAmigos[index].about
-                }
                 .onChange(of: textoOpinion){
                     if (textoOpinion.count > 150) {
                         textoOpinion = String(textoOpinion.prefix(150))
                     }
-                    amigoVM.arrAmigos[index].about = textoOpinion
                 }
                 .font(.footnote)
                 .scrollContentBackground(.hidden)
@@ -56,5 +51,14 @@ struct VistaDatos: View {
                 .frame(width: 300)
             Spacer()
         }.background(Color.brown)
+        .onAppear {
+            textoOpinion = amigoCurrent.about
+            favorito = amigoCurrent.favorito
+            amigoIndex = amigoVM.arrAmigos.firstIndex(where: {$0.id == amigoCurrent.id})!
+        }
+        .onDisappear {
+            amigoVM.arrAmigos[amigoIndex].about = textoOpinion
+            amigoVM.arrAmigos[amigoIndex].favorito = favorito
+        }
     }
 }

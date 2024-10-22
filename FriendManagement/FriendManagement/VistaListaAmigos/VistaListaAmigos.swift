@@ -29,6 +29,11 @@ struct VistaListaAmigos: View {
     @EnvironmentObject var amigoVM: AmigoViewModel
     @State var query: String = ""
     @State var soloFavoritos = false
+    @State var enEdicion: Bool = false
+    @State var nombre: String = ""
+    @State var telefono: String = ""
+    @State var email: String = ""
+    @State var imagenID: String = "Person"
     var body: some View {
         NavigationView{
             VStack {
@@ -68,9 +73,35 @@ struct VistaListaAmigos: View {
                             }
                             .background(Color.white)
                         }
-                    }
-                }
-            }.navigationTitle("Amigos")
+                    }.onDelete { indexSet in amigoVM.arrAmigos.remove(atOffsets: indexSet) }
+                        .onMove { indices, newOffset in
+                            amigoVM.arrAmigos.move(fromOffsets: indices, toOffset: newOffset)
+                        }
+                }.navigationTitle("Amigos")
+                    .navigationBarItems(
+                        leading:
+                            Button(){
+                                enEdicion.toggle()
+                            }
+                        label:{
+                            Text(enEdicion ? "Cancelar" : "Editar")
+                                .font(.title)
+                                .foregroundColor(Color.blue)
+                                .shadow(color: Color(red: 0.28, green: 0.855, blue: 0.92), radius:9)
+                        },
+                        trailing:
+                            Button(){
+                                VistaAddAmigo(nombre: $nombre, telefono: $telefono, email: $email, imagenID: $imagenID)
+                                amigoVM.arrAmigos.append(Amigo(nombre: nombre, telefono: telefono, email: email, imagenID: imagenID))
+                            }
+                        label: {
+                            Image(systemName: "plus.circle")
+                                .font(.title)
+                                .foregroundColor(Color.red)
+                                .shadow(color: Color.pink, radius:9)
+                        })
+                    .environment(\.editMode, .constant(enEdicion ? EditMode.active : EditMode.inactive))
+            }
         }
     }
 }

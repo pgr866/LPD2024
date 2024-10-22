@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3553B2A52CC7C0C300C23DDA /* VistaAddAmigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3553B2A42CC7C0C300C23DDA /* VistaAddAmigo.swift */; };
 		3580872E2CBEB24B004BE331 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3580872D2CBEB24B004BE331 /* Assets.xcassets */; };
 		358087552CBEB2E7004BE331 /* Amigo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087542CBEB2E7004BE331 /* Amigo.swift */; };
 		358087572CBEB2F2004BE331 /* Mensaje.swift in Sources */ = {isa = PBXBuildFile; fileRef = 358087562CBEB2F2004BE331 /* Mensaje.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3553B2A42CC7C0C300C23DDA /* VistaAddAmigo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VistaAddAmigo.swift; sourceTree = "<group>"; };
 		358087262CBEB24A004BE331 /* FriendManagement.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FriendManagement.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3580872D2CBEB24B004BE331 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		358087362CBEB24B004BE331 /* FriendManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FriendManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -180,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				358087782CBEB671004BE331 /* VistaListaAmigos.swift */,
+				3553B2A42CC7C0C300C23DDA /* VistaAddAmigo.swift */,
 			);
 			path = VistaListaAmigos;
 			sourceTree = "<group>";
@@ -344,6 +347,7 @@
 				358087552CBEB2E7004BE331 /* Amigo.swift in Sources */,
 				358087752CBEB633004BE331 /* VistaIdentificacion.swift in Sources */,
 				358087832CBEB6EF004BE331 /* VistaDatos.swift in Sources */,
+				3553B2A52CC7C0C300C23DDA /* VistaAddAmigo.swift in Sources */,
 				358087792CBEB671004BE331 /* VistaListaAmigos.swift in Sources */,
 				3580877D2CBEB6A9004BE331 /* VistaImagen.swift in Sources */,
 				358087572CBEB2F2004BE331 /* Mensaje.swift in Sources */,

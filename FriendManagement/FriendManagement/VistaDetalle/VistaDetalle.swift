@@ -6,12 +6,12 @@ struct VistaDetalle: View {
     var body: some View {
         ScrollView {
             VistaMapa(latitud: amigoCurrent.latitud, longitud: amigoCurrent.longitud)
-                .frame(height: 250, alignment:.center)
+                .frame(height: 230, alignment:.center)
             VistaImagen(imagenID: amigoCurrent.imagenID)
-                .padding(.bottom, -100)
+                .padding(.bottom, -50)
                 .offset(y:5)
             VistaDatos(amigoCurrent: amigoCurrent)
-                .offset(y:60)
+                .offset(y:45)
         }
         .background(Color.brown)
         .navigationTitle(amigoCurrent.nombre)
