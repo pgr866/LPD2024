@@ -34,6 +34,8 @@ struct VistaListaAmigos: View {
     @State var telefono: String = ""
     @State var email: String = ""
     @State var imagenID: String = "Person"
+    @State var mostrarAddAmigo: Bool = false
+    @State var cancelAddAmigo: Bool = false
     var body: some View {
         NavigationView{
             VStack {
@@ -90,16 +92,29 @@ struct VistaListaAmigos: View {
                                 .shadow(color: Color(red: 0.28, green: 0.855, blue: 0.92), radius:9)
                         },
                         trailing:
-                            Button(){
-                                VistaAddAmigo(nombre: $nombre, telefono: $telefono, email: $email, imagenID: $imagenID)
-                                amigoVM.arrAmigos.append(Amigo(nombre: nombre, telefono: telefono, email: email, imagenID: imagenID))
+                            Button() {
+                                mostrarAddAmigo.toggle()
+                                nombre = ""
+                                telefono = ""
+                                email = ""
+                                imagenID = "person"
+                            } label: {
+                                Image(systemName: "plus.circle")
+                                    .font(.title)
+                                    .foregroundColor(Color.red)
+                                    .shadow(color: Color.pink, radius: 9)
                             }
-                        label: {
-                            Image(systemName: "plus.circle")
-                                .font(.title)
-                                .foregroundColor(Color.red)
-                                .shadow(color: Color.pink, radius:9)
-                        })
+                            .sheet(isPresented: $mostrarAddAmigo,
+                                   onDismiss: {
+                                       if !cancelAddAmigo {
+                                           amigoVM.arrAmigos.append(Amigo(nombre: nombre.isEmpty ? "nuevoAmigo" : nombre,
+                                                                          telefono: telefono.isEmpty ? "7777777777" : telefono,
+                                                                          email: email.isEmpty ? "nuevoAmigo@gmailing.com" : email,
+                                                                          imagenID: imagenID))
+                                       }
+                                   }, content: {
+                                       VistaAddAmigo(nombre: $nombre, telefono: $telefono, email: $email, imagenID: $imagenID, cancelar: $cancelAddAmigo)
+                                   }))
                     .environment(\.editMode, .constant(enEdicion ? EditMode.active : EditMode.inactive))
             }
         }
