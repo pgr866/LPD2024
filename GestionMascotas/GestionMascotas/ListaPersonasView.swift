@@ -38,16 +38,24 @@ struct ListaPersonasView: View {
 struct HeaderView: View{
     @EnvironmentObject var vm: ViewModel
     var persona: PersonaEntity
+    @State var mostrarAddMascota = false
     var body: some View{
         if persona.foto != nil {
             HStack(){
-                Image(uiImage: UIImage(data: persona.foto!)!)
-                    .resizable()
-                    .scaledToFit()
-                    .clipShape(Circle())
-                    .overlay(Circle().stroke(Color.white, lineWidth: 1))
-                    .frame(width: 50, height: 50)
-                    .padding(.leading, -20)
+                Button(action: {
+                    mostrarAddMascota = true
+                }) {
+                    Image(uiImage: UIImage(data: persona.foto!)!)
+                        .resizable()
+                        .clipShape(Circle())
+                        .overlay(Circle().stroke(Color.white, lineWidth: 1))
+                        .frame(width: 50, height: 50)
+                        .padding(.leading, -20)
+                }
+                .sheet(isPresented: $mostrarAddMascota) {
+                    AddMascotaView(mostrarAddMascota: $mostrarAddMascota, persona: persona)
+                        .environmentObject(vm)
+                }
                 Text(persona.nombre!)
                     .foregroundColor(.black)
                     .font(.system(size: 16, weight: .regular))
@@ -61,7 +69,27 @@ struct FilaView: View{
     @EnvironmentObject var vm: ViewModel
     var persona: PersonaEntity
     var body: some View{
-        Text("Hello Section")
+        if let mascotas = persona.mascotasRelation?.allObjects as? [MascotaEntity] {
+            VStack{
+                Text("\(mascotas.count) mascotas")
+                ForEach(mascotas) {mascota in
+                    HStack{
+                        Image(mascota.raza!)
+                            .resizable()
+                            .frame(width: 20, height: 20)
+                            .scaledToFill()
+                        Text("\(mascota.nombre!) (\(mascota.edad) años)")
+                        Spacer()
+                        Image(systemName: "minus.circle")
+                            .font(.headline)
+                            .foregroundColor(.red)
+                            .onTapGesture {
+                                vm.deleteMascota(mascota: mascota)
+                            }
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -73,29 +101,39 @@ struct AddPersonaView: View{
     @Binding var mostrarAddPersona: Bool
     var body: some View{
         HStack {
-            Button()
-            VStack{
-        TextField("Nombre de la persona...)
-        HStack {
-        Spacer()
             Button(){
-                vm.addPersona(nombre: nombre.isEmpty ? "NoName" : nombre, foto: imageGeneral)
+                mostrarImagePicker.toggle()
             }label:{
-                Image(systemName: "square.and.arrow.down.on.square.fill")
+                Image(uiImage: imageGeneral)
                     .resizable()
                     .scaledToFit()
                     .frame(width: 90, height:90)
                     .overlay(RoundedRectangle(cornerRadius: 10).stroke(Color.white, lineWidth: 2))
                     .shadow(color: .gray, radius:9)
                     .padding(.vertical)
+                    .padding(.horizontal)
             }
             .sheet(isPresented: $mostrarImagePicker){
                 ImagePicker(sourceType: .photoLibrary){imageSeleccionada in
                     imageGeneral = imageSeleccionada
                 }
             }
-        }
-        }
+            VStack {
+                TextField("Nombre de la persona...", text: $nombre)
+                HStack {
+                    Spacer()
+                    Button(){
+                        vm.addPersona(nombre: nombre.isEmpty ? "NoName" : nombre, foto: imageGeneral)
+                    }label:{
+                        Image(systemName: "square.and.arrow.down.on.square.fill")
+                            .resizable()
+                            .frame(width: 40, height:40)
+                            .shadow(color: .pink, radius: 14, x: 5, y: 5)
+                            .shadow(color: .gray, radius: 14, x: -5, y: -5)
+                    }
+                }
+                .padding(.horizontal)
+            }
         }
     }
 }
