@@ -14,6 +14,7 @@
 		352535282CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 352535262CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld */; };
 		352535322CD109EB00E172BA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3525352D2CD107D500E172BA /* ViewModel.swift */; };
 		352535332CD10A0D00E172BA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352535292CD1025E00E172BA /* CoreDataManager.swift */; };
+		355A30052CD11A0C00EBFB0F /* ImagePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352535212CD0F8A900E172BA /* ImagePicker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -277,6 +278,7 @@
 				352535252CD0F93500E172BA /* ListaPersonasView.swift in Sources */,
 				352535112CD0F83700E172BA /* GestionMascotasApp.swift in Sources */,
 				352535322CD109EB00E172BA /* ViewModel.swift in Sources */,
+				355A30052CD11A0C00EBFB0F /* ImagePicker.swift in Sources */,
 				352535332CD10A0D00E172BA /* CoreDataManager.swift in Sources */,
 				352535282CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld in Sources */,
 			);

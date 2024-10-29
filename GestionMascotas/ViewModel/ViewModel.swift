@@ -7,6 +7,8 @@ class ViewModel: ObservableObject{
     @Published var personasArray: [PersonaEntity] = []
     @Published var mascotasArray: [MascotaEntity] = []
     init(){
+        addPersona(nombre: "Pepe Pérez", foto: UIImage(systemName: "person.circle")!)
+        addPersona(nombre: "María de las Angustias", foto: UIImage(systemName: "person.circle")!)
         cargarDatos()
     }
     func cargarDatos(){
