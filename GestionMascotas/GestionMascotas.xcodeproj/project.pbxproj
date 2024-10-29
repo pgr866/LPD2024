@@ -11,6 +11,9 @@
 		352535122CD0F83700E172BA /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3525350A2CD0F83700E172BA /* Preview Assets.xcassets */; };
 		352535132CD0F83700E172BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3525350C2CD0F83700E172BA /* Assets.xcassets */; };
 		352535252CD0F93500E172BA /* ListaPersonasView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352535242CD0F93500E172BA /* ListaPersonasView.swift */; };
+		352535282CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 352535262CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld */; };
+		352535322CD109EB00E172BA /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3525352D2CD107D500E172BA /* ViewModel.swift */; };
+		352535332CD10A0D00E172BA /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 352535292CD1025E00E172BA /* CoreDataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +42,9 @@
 		3525350E2CD0F83700E172BA /* GestionMascotasApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GestionMascotasApp.swift; sourceTree = "<group>"; };
 		352535212CD0F8A900E172BA /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		352535242CD0F93500E172BA /* ListaPersonasView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListaPersonasView.swift; sourceTree = "<group>"; };
+		352535272CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = GestionMascotasModel.xcdatamodel; sourceTree = "<group>"; };
+		352535292CD1025E00E172BA /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		3525352D2CD107D500E172BA /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +123,7 @@
 		3525351E2CD0F86100E172BA /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				352535262CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -124,6 +131,8 @@
 		3525351F2CD0F86F00E172BA /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				352535292CD1025E00E172BA /* CoreDataManager.swift */,
+				3525352D2CD107D500E172BA /* ViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -267,6 +276,9 @@
 			files = (
 				352535252CD0F93500E172BA /* ListaPersonasView.swift in Sources */,
 				352535112CD0F83700E172BA /* GestionMascotasApp.swift in Sources */,
+				352535322CD109EB00E172BA /* ViewModel.swift in Sources */,
+				352535332CD10A0D00E172BA /* CoreDataManager.swift in Sources */,
+				352535282CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -583,6 +595,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		352535262CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				352535272CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodel */,
+			);
+			currentVersion = 352535272CD0FE6C00E172BA /* GestionMascotasModel.xcdatamodel */;
+			path = GestionMascotasModel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 352534D52CD0F7B100E172BA /* Project object */;
 }

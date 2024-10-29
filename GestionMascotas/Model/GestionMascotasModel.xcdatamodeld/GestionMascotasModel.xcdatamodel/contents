@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="23231" systemVersion="24A348" minimumToolsVersion="Automatic" sourceLanguage="Swift" usedWithSwiftData="YES" userDefinedModelVersionIdentifier="">
+    <entity name="MascotaEntity" representedClassName="MascotaEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="edad" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <attribute name="raza" optional="YES" attributeType="String"/>
+        <relationship name="personasRelation" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="PersonaEntity" inverseName="mascotasRelation" inverseEntity="PersonaEntity"/>
+    </entity>
+    <entity name="PersonaEntity" representedClassName="PersonaEntity" syncable="YES" codeGenerationType="class">
+        <attribute name="foto" optional="YES" attributeType="Binary"/>
+        <attribute name="nombre" optional="YES" attributeType="String"/>
+        <relationship name="mascotasRelation" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="MascotaEntity" inverseName="personasRelation" inverseEntity="MascotaEntity"/>
+    </entity>
+</model>
